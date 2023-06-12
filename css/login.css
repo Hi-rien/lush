@@ -1,0 +1,407 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'lsuh';
+  src: url('../font/Lush.woff') format("woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+h2 {
+  font-size: 1.3rem;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 60px;
+  background-color: #fff;
+}
+
+#header {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  height: 60px;
+  text-align: center;
+}
+#header img {
+  cursor: pointer;
+}
+#header h1 img {
+  height: 70px;
+  margin-top: 10px;
+}
+#header .hamburger {
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+#header .right {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+#header .right img {
+  width: 18px;
+  margin-left: 8px;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  transition: left .5s;
+}
+#menu h2 {
+  font-size: 2rem;
+  padding: 10px 20px;
+}
+#menu span {
+  font-weight: bold;
+  color: #333;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+#menu .main {
+  margin: 10%;
+}
+#menu .main > li {
+  margin: 15px 0;
+}
+#menu ul li a {
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: bold;
+  display: block;
+}
+#menu .sub {
+  margin-left: 30%;
+  display: none;
+}
+#menu .sub.active {
+  display: block;
+}
+#menu .main .sub li {
+  margin: 15px 0;
+}
+#menu .main .sub li:hover a {
+  font-weight: bold;
+}
+#menu .main .sub li a {
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.search_bar {
+  width: 100%;
+  height: 380px;
+  background-color: #fff;
+  position: fixed;
+  top: -380px;
+  text-align: center;
+  transition: top .5s;
+}
+.search_bar .material-symbols-outlined {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2.5rem;
+  color: #333;
+  cursor: pointer;
+}
+.search_bar #box {
+  position: relative;
+  width: 100%;
+  margin-top: 6rem;
+}
+.search_bar input {
+  width: 80%;
+  border: none;
+  border-bottom: 2px solid #999;
+  outline: none;
+  text-indent: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.search_bar #box img {
+  position: absolute;
+  width: 20px;
+  right: 15%;
+}
+.search_bar ul {
+  margin-top: 2rem;
+}
+.search_bar ul li {
+  padding-left: 15%;
+  text-align: left;
+}
+.search_bar ul li span {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.search_bar ul li .tag {
+  width: 100%;
+  height: 60px;
+  margin-left: 20px;
+}
+.search_bar .tag a {
+  line-height: 60px;
+  color: #000;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+}
+.banner img {
+  width: 100%;
+  height: 187px;
+  margin-bottom: 20px;
+}
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 187px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.banner span {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  font-family: 'lush';
+  color: #fff;
+  z-index: 1;
+}
+
+form {
+  width: 90%;
+  margin: 0 auto;
+  /* background-color: #999; */
+  text-align: center;
+}
+form legend {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+form input[type=text] {
+  width: 100%;
+  height: 30px;
+  margin: 5px 0;
+  outline: none;
+  border: none;
+  border: 1px solid #999;
+  color: #333;
+  text-indent: 5px;
+}
+form a {
+  display: inline-block;
+  color: #000;
+}
+form fieldset > a {
+  font-weight: bold;
+  width: 80px;
+  border-bottom: 2px solid  #000;
+  padding-bottom: 5px;
+  margin: 20px 0;
+}
+form fieldset .off {
+  border-bottom: 2px solid #999;
+}
+form fieldset ul li:nth-child(3) {
+  text-align: left;
+  margin: 10px 0;
+}
+input[type=checkbox].checkbox {
+  border: none;
+  background: none;
+  position: absolute;
+  left: -9999px;
+}
+input[type=checkbox].checkbox + label {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  background: url('../img/checkbox_on_black2.png') no-repeat 0 0;
+  padding: 0 0 0 30px;
+  background-size: 20px 40px;
+}
+input[type=checkbox].checkbox:checked + label {
+  background-position: 0 -20px;
+}
+
+input[type=submit].sign {
+  border: none;
+  background-color: #222;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+form fieldset ul li:last-child a {
+  margin: 20px 10px;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  color: #333;
+}
+
+.sns_login {
+  width: 90%;
+  margin: 0 auto 30px;
+}
+.sns_login div {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.sns_login .naver {
+  background-color: #2db400;
+  background-image: url('../img/naver.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 20px 10px;
+  text-align: center;
+  line-height: 50px;
+}
+.sns_login .kakao {
+  background-color: #fee500;
+  background-image: url('../img/kakao.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 20px 10px;
+  text-align: center;
+  line-height: 50px;
+}
+.sns_login a {
+  display: block;
+}
+.sns_login .naver a {
+  color: #fff;
+}
+.sns_login .kakao a {
+  color: #000;
+}
+
+
+footer {
+  width: 100%;
+}
+footer .core {
+  width: 100%;
+  height: 4rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+footer .core ul {
+  width: 90%;
+  margin: 0 auto;
+}
+footer .core li {
+  width: 16.66%;
+  height: 100%;
+  float: left;
+}
+footer .core li a {
+  display: block;
+  height: 4rem;
+}
+footer .core li img {
+  width: 100%;
+  height: 100%;
+}
+
+.foot {
+  width: 100%;
+  background-color: #000;
+  color: #999;
+  font-size: 0.8rem;
+}
+.foot .content {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.6rem 0;
+}
+.foot .content .under {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.foot .input {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  margin: 20px 0;
+}
+.foot input {
+  width: 100%;
+  height: 35px;
+  background-color: #333;
+  outline: none;
+  border: none;
+  text-indent: 10px;
+  color: #999;
+}
+.foot .content button {
+  position: absolute;
+  right: 3%;
+  line-height: 35px;
+  background: none;
+  border: none;
+  color: #999;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.content .icon {
+  width: 50%;
+  margin-bottom: 20px;
+}
+.icon li {
+  width: 20%;
+  float: left;
+}
+.icon li a {
+  display: block;
+  margin-right: 5px;
+}
+.content .icon li img {
+  width: 100%;
+}
+.content .set1 {
+  margin-bottom: 20px;
+}
+.content .set1 .bold {
+  font-weight: bold;
+}
+.content .set2 {
+  margin-bottom: 20px;
+}
+.content .set2 li a {
+  color: #999;
+  font-weight: bold;
+}
+.content .set2 li .yellow {
+  color: rgb(235, 199, 0);
+}
+.content .set3 {
+  margin-bottom: 20px;
+}

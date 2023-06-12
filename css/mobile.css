@@ -1,0 +1,618 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'lsuh';
+  src: url('../font/Lush.woff') format("woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+a {
+  color: #000;
+}
+body {
+  height: 1500px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#top {
+  position: fixed;
+  bottom: 50px;
+  right:  -50px;
+  z-index: 100;
+  background-color: #000;
+  border-radius: 30%;
+  padding: 10px;
+  transition: all .5s;
+}
+#top.toTop {
+  right: 20px;
+}
+#top i {
+  color: #fff;
+  font-size: 20px;
+}
+
+.pop {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 300px;
+  background-color: #111;
+  z-index: 20;
+  text-align: center;
+  box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.pop p {
+  color: #fff;
+}
+.pop .content {
+  width: 80%;
+  padding: 30px 0;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: .9rem;
+  margin: 0 auto;
+}
+.pop .close_pop {
+  position: relative;
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  font-size: .8rem;
+}
+.pop .pop_close,
+.pop .pop_day {
+  position: absolute;
+  bottom: 30px;
+  cursor: pointer;
+}
+.pop .pop_close {
+  right: 0;
+}
+.pop span {
+  font-family: 'lush';
+  display: block;
+  color: #000;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  font-size: 2rem;
+  line-height: 60px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+
+h2 {
+  font-size: 1.3rem;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  transition: background-color 0.5s ease-in-out;
+}
+header.header {
+  background-color: #fff;
+}
+
+#header {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  height: 60px;
+  text-align: center;
+}
+#header img {
+  cursor: pointer;
+}
+#header h1 img {
+  height: 70px;
+  margin-top: 10px;
+}
+#header .hamburger {
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+#header .right {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+#header .right img {
+  width: 18px;
+  margin-left: 8px;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  transition: left .5s;
+}
+#menu h2 {
+  font-size: 2rem;
+  padding-top: 10%;
+  padding-left: 10%;
+}
+#menu span {
+  font-weight: bold;
+  color: #333;
+  position: absolute;
+  top: 3%;
+  right: 6%;
+  cursor: pointer;
+}
+#menu .main {
+  margin: 10%;
+}
+#menu .main > li {
+  margin: 15px 0;
+}
+#menu ul li a {
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: bold;
+  display: block;
+}
+#menu .sub {
+  margin-left: 30%;
+  display: none;
+}
+#menu .sub.active {
+  display: block;
+}
+#menu .main .sub li {
+  margin: 15px 0;
+}
+#menu .main .sub li:hover a {
+  font-weight: bold;
+}
+#menu .main .sub li a {
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.search_bar {
+  /* display: none; */
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  position: fixed;
+  top: -380px;
+  text-align: center;
+  transition: top .5s;
+}
+.search_bar .material-symbols-outlined {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2.5rem;
+  color: #333;
+  cursor: pointer;
+}
+.search_bar #box {
+  position: relative;
+  width: 100%;
+  margin-top: 6rem;
+}
+.search_bar input {
+  width: 80%;
+  border: none;
+  border-bottom: 2px solid #999;
+  outline: none;
+  text-indent: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.search_bar #box img {
+  position: absolute;
+  width: 20px;
+  right: 15%;
+}
+.search_bar ul {
+  margin-top: 2rem;
+}
+.search_bar ul li {
+  padding-left: 15%;
+  text-align: left;
+}
+.search_bar ul li span {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.search_bar ul li .tag {
+  width: 100%;
+  height: 60px;
+  margin-left: 20px;
+}
+.search_bar .tag a {
+  line-height: 60px;
+  color: #000;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+
+
+.banner {
+  width: 100%;
+  position: relative;
+  height: 300px;
+}
+.banner.wh {
+  color: #fff;
+}
+
+.banner img {
+  width: 100%;
+  height: 300px;
+}
+.banner .ment {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+.banner a {
+  display: block;
+}
+.banner p {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.banner span {
+  display: block;
+  font-size: .75rem;
+}
+
+
+.best .material-symbols-outlined,
+.new .material-symbols-outlined {
+  position: absolute;
+  left: 250px;
+  top: 32px;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.best {
+  position: relative;
+  width: 90%;
+  margin: 3rem auto;
+  background-color: #fff;
+}
+.best a {
+  display: block;
+}
+.best span {
+  font-size: 0.8rem;
+}
+.best .b_menu {
+  width: 100%;
+  margin: 20px auto;
+  display: none;
+  opacity: 0;
+}
+.best .b_menu.active {
+  display: block;
+  opacity: 1;
+}
+
+.b_menu .box {
+  position: relative;
+  width: 50%;
+  text-align: center;
+  float: left;
+}
+.b_menu .box img {
+  width: 80%;
+  cursor: pointer;
+}
+.b_menu span {
+  display: block;
+  color: #000;
+  font-weight: bold;
+  padding: 2px 0;
+}
+.b_menu .box .icon {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+.b_menu .box .icon .fav {
+  width: 16px;
+  padding-top: 3px;
+}
+.b_menu .box .icon .bag {
+  width: 14px;
+  margin-left: 8px;
+}
+.b_menu .box .tag {
+  width: 50px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 2rem;
+}
+
+.best #roll {
+  width: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.best #roll a {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #999;
+}
+.best #roll a.on {
+  background-color: #000;
+}
+
+
+.hash {
+  width: 100%;
+  position: relative;
+}
+
+.hash img {
+  width: 100%;
+}
+.hash .hash_tag li {
+  position: absolute;
+  width: 20%;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fly-01 {
+  0% {
+    transform: translateY(2px);
+  }
+  25% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+.hash .hash_tag li:nth-child(1) {
+  top: 30%;
+  left: 35%;
+  animation: fly-01 4s infinite;
+}
+.hash .hash_tag li:nth-child(2) {
+  top: 55%;
+  left: 20%;
+  animation: fly-01 4s infinite;
+  animation-delay: 1.5s;
+}
+.hash .hash_tag li:nth-child(3) {
+  top: 50%;
+  right: 20%;
+  animation: fly-01 4s infinite;
+  animation-delay: 3s;
+}
+.hash .hash_tag li a {
+  display: block;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  font-size: .85rem;
+}
+.new {
+  width: 90%;
+  margin: 3rem auto;
+  position: relative;
+}
+.new > span {
+  font-size: 0.8rem;
+}
+.new ul {
+  width: 90%;
+  margin: 0 auto;
+}
+.new li {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  /* background-color: aquamarine; */
+  text-align: center;
+  margin: 10px 0;
+}
+.new li .product {
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-left: -5%;
+}
+.new li span {
+  position: absolute;
+  line-height: 80px;
+  color: #000;
+  font-weight: bold;
+}
+.new li .name {
+  left: 25%;
+}
+.new li .price {
+  font-size: 0.9rem;
+  left: 55%;
+  font-weight: normal;
+}
+.new li a {
+  display: block;
+}
+.new .icons {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.new .icons .fav {
+  right: 30px;
+}
+.new .icons img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 15px;
+}
+
+.campaign {
+  width: 100%;
+}
+.campaign .text {
+  width: 90%;
+  margin: 1.5rem auto;
+}
+.campaign .text span {
+  font-size: 0.8rem;
+}
+.campaign img {
+  width: 100%;
+  vertical-align: bottom;
+}
+footer {
+  width: 100%;
+}
+footer .core {
+  width: 100%;
+  height: 4rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+footer .core ul {
+  width: 90%;
+  margin: 0 auto;
+}
+footer .core li {
+  width: 16.66%;
+  height: 100%;
+  float: left;
+}
+footer .core li a {
+  display: block;
+  height: 4rem;
+}
+footer .core li img {
+  width: 100%;
+  height: 100%;
+}
+
+footer .event {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(235, 199, 0);
+  text-align: center;
+}
+footer .event a {
+  display: inline-block;
+  margin: 0 5px;
+  line-height: 30px;
+  font-size: 0.75rem;
+  color: #000;
+}
+footer .event a:first-child {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.foot {
+  width: 100%;
+  background-color: #000;
+  color: #999;
+  font-size: 0.8rem;
+}
+.foot .content {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.6rem 0;
+}
+.foot .content .under {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.foot .input {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  margin: 20px 0;
+}
+.foot input {
+  width: 100%;
+  height: 35px;
+  background-color: #333;
+  outline: none;
+  border: none;
+  text-indent: 10px;
+  color: #999;
+}
+.foot .content button {
+  position: absolute;
+  right: 3%;
+  line-height: 35px;
+  background: none;
+  border: none;
+  color: #999;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.content .icon {
+  width: 50%;
+  margin-bottom: 20px;
+}
+.icon li {
+  width: 20%;
+  float: left;
+}
+.icon li a {
+  display: block;
+  margin-right: 5px;
+}
+.content .icon li img {
+  width: 100%;
+}
+.content .set1 {
+  margin-bottom: 20px;
+}
+.content .set1 .bold {
+  font-weight: bold;
+}
+.content .set2 {
+  margin-bottom: 20px;
+}
+.content .set2 li a {
+  color: #999;
+  font-weight: bold;
+}
+.content .set2 li .yellow {
+  color: rgb(235, 199, 0);
+}
+.content .set3 {
+  margin-bottom: 20px;
+}
