@@ -296,6 +296,23 @@ footer .core li img {
   text-indent: 10px;
   color: #999;
 }
+footer .event {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(235, 199, 0);
+  text-align: center;
+}
+footer .event a {
+  display: inline-block;
+  margin: 0 5px;
+  line-height: 30px;
+  font-size: 0.75rem;
+  color: #000;
+}
+footer .event a:first-child {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
 .foot .content button {
   position: absolute;
   right: 3%;
